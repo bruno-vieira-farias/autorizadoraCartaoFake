@@ -1,0 +1,18 @@
+server:
+  port: 8088
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:autorizadora
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    show-sql: true
+
+  security:
+    user:
+      name: admin
+      password: fiap
+      roles: ADMIN
+
