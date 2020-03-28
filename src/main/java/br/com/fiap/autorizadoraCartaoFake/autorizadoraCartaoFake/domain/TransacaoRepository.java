@@ -10,7 +10,7 @@ import java.util.List;
 @Component
 public class TransacaoRepository {
 
-    public List<Transacao> getMassaTransacaoInicial() {
+    public List<Transacao> getCargaInicialTransacoes() {
         return Arrays.asList(
                 new Transacao(1, LocalDateTime.now(), BigDecimal.valueOf(10.0), StatusTransacao.AUTORIZADA, "", 4000000000000001L),
                 new Transacao(2, LocalDateTime.now(), BigDecimal.valueOf(10.0), StatusTransacao.AUTORIZADA, "", 4000000000000002L),
@@ -18,6 +18,4 @@ public class TransacaoRepository {
                 new Transacao(4, LocalDateTime.now(), BigDecimal.valueOf(10.0), StatusTransacao.AUTORIZADA, "", 4000000000000004L)
         );
     }
-
-    ;
 }
