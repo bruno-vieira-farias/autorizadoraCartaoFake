@@ -1,19 +1,19 @@
 package br.com.fiap.autorizadoraCartaoFake.autorizadoraCartaoFake.Scheduler;
 
-import br.com.fiap.autorizadoraCartaoFake.autorizadoraCartaoFake.service.CargaInicialService;
+import br.com.fiap.autorizadoraCartaoFake.autorizadoraCartaoFake.service.TransacaoService;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CargaInicialScheduler {
-    private final CargaInicialService cargaInicialService;
+    private final TransacaoService transacaoService;
 
-    public CargaInicialScheduler(CargaInicialService cargaInicialService) {
-        this.cargaInicialService = cargaInicialService;
+    public CargaInicialScheduler(TransacaoService transacaoService) {
+        this.transacaoService = transacaoService;
     }
 
     @Scheduled(cron = "*/5 * * * * ?")
     public void execute() {
-        System.out.println("Rodei");
+        transacaoService.enviaTransacaoRandomica();
     }
 }
