@@ -1,10 +1,8 @@
 # Autorizadora Fake para transações API Cartão de crédito FIAP
 
 API de um sistema de cartão de crédito para alunos da FIAP que conta com recursos como:
-- Carga de arquivo de importação;
-- Cadastro de alunos;
-- Realização de transações;
-- Download de extrato no formato txt.
+- Envia uma carga inicial com 1300 transações;
+- Envia uma nova transacao a cada 5 segundos;
 
 ### Setup
 
@@ -19,7 +17,3 @@ Execute na raiz do projeto a task `bootRun` do gradle.
   `gradlew bootRun`
 - Linux / Mac
   `./gradlew bootRun`
-
-
-### Documentação da API
-Executando localmente a API na porta 8088, a documentação estará disponivel em [Swagger](http://localhost:8088/api/swagger-ui.html).
