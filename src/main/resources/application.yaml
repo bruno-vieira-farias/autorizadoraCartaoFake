@@ -16,3 +16,6 @@ spring:
       password: fiap
       roles: ADMIN
 
+cartao-credito:
+  baseUrl: http://localhost:8080
+

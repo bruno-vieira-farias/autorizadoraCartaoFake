@@ -8,16 +8,18 @@ import kong.unirest.HttpResponse;
 import kong.unirest.JacksonObjectMapper;
 import kong.unirest.JsonNode;
 import kong.unirest.Unirest;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Service
 public class EnvioTransacaoService {
-    private final String URL = "http://localhost:8080/api/transacao";
+    private String URL;
 
-    public EnvioTransacaoService() {
+    public EnvioTransacaoService(@Value("${cartao-credito.baseUrl}") String baseUrl) {
         setup();
+        this.URL = baseUrl.concat("/api/transacao");
     }
 
     public boolean enviaTransacao(List<Transacao> transacoes) {
