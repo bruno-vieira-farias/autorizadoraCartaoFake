@@ -40,7 +40,7 @@ public class TransacaoService {
         }
 
         try {
-            Transacao transacaoRandomica = transacaoRepository.getTransacaoRandomica();
+            Transacao transacaoRandomica = transacaoRepository.geraTransacaoRandomica();
             envioTransacaoService.enviaTransacao(transacaoRandomica);
         } catch (Exception e) {
             System.out.println("Abafa o caso.");

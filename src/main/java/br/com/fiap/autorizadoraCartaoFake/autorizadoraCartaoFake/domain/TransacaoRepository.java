@@ -29,8 +29,7 @@ public class TransacaoRepository {
         return transacoes;
     }
 
-
-    public Transacao getTransacaoRandomica(){
+    public Transacao geraTransacaoRandomica(){
         Transacao transacaoRandomica = new Transacao(
                 obtemProximoId(),
                 LocalDateTime.now(),
