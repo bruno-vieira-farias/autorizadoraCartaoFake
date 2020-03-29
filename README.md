@@ -1,6 +1,6 @@
-# Autorizadora Fake para transações API Cartão de crédito FIAP
+# Autorizadora Fake para transações - API Cartão de crédito FIAP
 
-API de um sistema de cartão de crédito para alunos da FIAP que conta com recursos como:
+Sistema que simula uma autorizadora de cartão de crédito para alunos da FIAP que conta com recursos como:
 - Envia uma carga inicial com 1300 transações;
 - Envia uma nova transacao a cada 5 segundos;
 
